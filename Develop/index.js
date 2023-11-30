@@ -15,22 +15,22 @@ const questions = [{
 },
 {
     type: "input",
-    name: "installation instructions",
+    name: "installation",
     message: "What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running."
 },
 {
     type: "input",
-    name: "Usage information",
+    name: "usage",
     message: "Provide instructions and examples for use."
 },
 {
     type: "input",
-    name: "contribution guidelines",
+    name: "contributing",
     message: "Enter collaborators, if any, and any other sources used."
 },
 {
     type: "input",
-    name: "test instructions",
+    name: "tests",
     message: "Write tests for your application."
 },
 {
@@ -52,7 +52,44 @@ const questions = [{
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    const content = `
+    # ${title}
+    
+    ## Description
+    ${description}
+    
+    ## Table of Contents
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [License](#license)
+    - [Contributing](#contributing)
+    - [Tests](#tests)
+    - [Questions](#questions)
+    
+    
+    ## Installation
+    ${installation}
+    
+    ## Usage
+    ${usage}
+    
+    ## License
+    The license used for this project is ${license}.
+
+    ## Contributing
+    ${contributing}
+
+    ## Tests
+    ${tests}
+    
+    ## Questions
+    Any questions or concerns feel free to reach out.
+    ${github}
+    ${email}
+    `
+    // fs.appendFile('README.md, (err) => err ? console.error(err) : console.log("Logged!"))
+}
 
 // TODO: Create a function to initialize app
 function init() {}
