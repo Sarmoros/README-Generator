@@ -55,7 +55,7 @@ const questions = [{
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     const content = `
-    # ${data.title}
+    # ${data.title} // or answers.title??
     
     ## Description
     ${data.description}
@@ -76,7 +76,7 @@ function writeToFile(fileName, data) {
     ${data.usage}
     
     ## License
-    The license used for this project is ${data.license}.
+    The license used for this project is ${data.license}. //find links for license to display badge
 
     ## Contributing
     ${data.contributing}
@@ -98,3 +98,5 @@ function init() {}
 
 // Function call to initialize app
 init();
+
+ 
