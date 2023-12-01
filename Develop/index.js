@@ -54,10 +54,10 @@ const questions = [{
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     const content = `
-    # ${title}
+    # ${data.title}
     
     ## Description
-    ${description}
+    ${data.description}
     
     ## Table of Contents
     - [Installation](#installation)
@@ -69,26 +69,27 @@ function writeToFile(fileName, data) {
     
     
     ## Installation
-    ${installation}
+    ${data.installation}
     
     ## Usage
-    ${usage}
+    ${data.usage}
     
     ## License
-    The license used for this project is ${license}.
+    The license used for this project is ${data.license}.
 
     ## Contributing
-    ${contributing}
+    ${data.contributing}
 
     ## Tests
-    ${tests}
+    ${data.tests}
     
     ## Questions
     Any questions or concerns feel free to reach out.
-    ${github}
-    ${email}
-    `
-    // fs.appendFile('README.md, (err) => err ? console.error(err) : console.log("Logged!"))
+    Github: [${data.github} (https://github.com/${data.github})
+    Email: ${data.email}
+    `;
+
+    return content;
 }
 
 // TODO: Create a function to initialize app
