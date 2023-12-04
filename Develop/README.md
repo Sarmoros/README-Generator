@@ -1,7 +1,7 @@
-# kai
+# title
     
   ## Description
-  nina
+  why and how
     
   ## Table of Contents
   - [Installation](#installation)
@@ -13,19 +13,24 @@
     
     
   ## Installation
-  nani
+  steos teos
     
   ## Usage
-  toti
+  1 2 and 3
     
   ## License
-  The license used for this project is MIT.  //find links for license to display badge
+  The license used for this project is GPLv2.  function renderLicenseLink(license) {
+  if (license !== "None") {
+    return `[${data.license}](https://opensource.org/licenses/${data.license})`
+  }
+  return ""
+}//find links for license to display badge
 
   ## Contributing
-  me
+  me myself i
 
   ## Tests
-  sari
+  test test
     
   ## Questions
   Any questions or concerns feel free to reach out.

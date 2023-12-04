@@ -62,7 +62,7 @@ function writeToFile(fileName, data) {
 
 
 
-//     const content = `
+//     `
 //     # ${data.title} // or answers.title??
     
 //     ## Description
