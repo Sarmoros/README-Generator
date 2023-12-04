@@ -1,6 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
+const path = require("path");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [{
@@ -37,7 +39,7 @@ const questions = [{
     type: "list",
     name: "license",
     message: "Choose your License:",
-    choices: ['MIT', 'GPLv2', 'Apache']
+    choices: ['MIT', 'GPLv2', 'Apache', 'None']
 },
 {
     type: "input",
@@ -54,49 +56,60 @@ const questions = [{
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    const content = `
-    # ${data.title} // or answers.title??
-    
-    ## Description
-    ${data.description}
-    
-    ## Table of Contents
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
-    
-    
-    ## Installation
-    ${data.installation}
-    
-    ## Usage
-    ${data.usage}
-    
-    ## License
-    The license used for this project is ${data.license}. //find links for license to display badge
-
-    ## Contributing
-    ${data.contributing}
-
-    ## Tests
-    ${data.tests}
-    
-    ## Questions
-    Any questions or concerns feel free to reach out.
-    Github: [${data.github} (https://github.com/${data.github})
-    Email: ${data.email}
-    `;
-
-    return content;
+    return fs.writeFileSync(path.join(process.cwd(), fileName),data)
 }
 
+
+
+
+//     const content = `
+//     # ${data.title} // or answers.title??
+    
+//     ## Description
+//     ${data.description}
+    
+//     ## Table of Contents
+//     - [Installation](#installation)
+//     - [Usage](#usage)
+//     - [License](#license)
+//     - [Contributing](#contributing)
+//     - [Tests](#tests)
+//     - [Questions](#questions)
+    
+    
+//     ## Installation
+//     ${data.installation}
+    
+//     ## Usage
+//     ${data.usage}
+    
+//     ## License
+//     The license used for this project is ${data.license}. //find links for license to display badge
+
+//     ## Contributing
+//     ${data.contributing}
+
+//     ## Tests
+//     ${data.tests}
+    
+//     ## Questions
+//     Any questions or concerns feel free to reach out.
+//     Github: [${data.github} (https://github.com/${data.github})
+//     Email: ${data.email}
+//     `;
+
+//     return content;
+
+// }
+
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((responses) => {
+    writeToFile("README.md", generateMarkdown({...responses}))
+})}
 
 // Function call to initialize app
+
 init();
 
  
