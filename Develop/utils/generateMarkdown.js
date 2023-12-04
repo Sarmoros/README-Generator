@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license !== "None") {
-    return `[![${data.license}](https://img.shields.io/badge/${data.license})]` //enter the link in here ${}
+    return `[!${license}](https://img.shields.io/badge/${license}-blue)` //enter the link in here ${}
   }
   return ""
 }
@@ -11,7 +11,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license !== "None") {
-    return `[${data.license}](https://opensource.org/licenses/${data.license})`
+    return `[${license}](https://opensource.org/licenses/${license})`
   }
   return ""
 }

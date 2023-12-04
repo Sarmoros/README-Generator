@@ -1,7 +1,7 @@
-# title
+# kai
     
   ## Description
-  why and how
+  kai
     
   ## Table of Contents
   - [Installation](#installation)
@@ -13,27 +13,24 @@
     
     
   ## Installation
-  steos teos
+  kai
     
   ## Usage
-  1 2 and 3
+  kai
     
   ## License
-  The license used for this project is GPLv2.  function renderLicenseLink(license) {
-  if (license !== "None") {
-    return `[${data.license}](https://opensource.org/licenses/${data.license})`
-  }
-  return ""
-}//find links for license to display badge
+  The license used for this project is Apache. 
+  [![Apache](https://img.shields.io/badge/Apache-blue) 
+  [Apache](https://opensource.org/licenses/Apache) //find links for license to display badge
 
   ## Contributing
-  me myself i
+  kai
 
   ## Tests
-  test test
+  kai
     
   ## Questions
   Any questions or concerns feel free to reach out.
   Github: [sarmoros] (https://github.com/sarmoros)
-  Email: sarahym0703@gmail.com
+  Email: sarahy0703advakv
   
