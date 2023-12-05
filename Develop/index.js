@@ -59,49 +59,6 @@ function writeToFile(fileName, data) {
     return fs.writeFileSync(path.join(process.cwd(), fileName),data)
 }
 
-
-
-
-//     `
-//     # ${data.title} // or answers.title??
-    
-//     ## Description
-//     ${data.description}
-    
-//     ## Table of Contents
-//     - [Installation](#installation)
-//     - [Usage](#usage)
-//     - [License](#license)
-//     - [Contributing](#contributing)
-//     - [Tests](#tests)
-//     - [Questions](#questions)
-    
-    
-//     ## Installation
-//     ${data.installation}
-    
-//     ## Usage
-//     ${data.usage}
-    
-//     ## License
-//     The license used for this project is ${data.license}. //find links for license to display badge
-
-//     ## Contributing
-//     ${data.contributing}
-
-//     ## Tests
-//     ${data.tests}
-    
-//     ## Questions
-//     Any questions or concerns feel free to reach out.
-//     Github: [${data.github} (https://github.com/${data.github})
-//     Email: ${data.email}
-//     `;
-
-//     return content;
-
-// }
-
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((responses) => {
