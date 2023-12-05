@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license !== "None") {
-    return `[!${license}](https://img.shields.io/badge/${license}-blue)` //enter the link in here ${}
+    return `[!${license}](https://img.shields.io/badge/${license}-blue)`
   }
   return ""
 }
@@ -20,7 +20,10 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== "None") {
-    return `` //enter the link in here ${}
+    return `## License
+This project is licensed under the ${renderLicenseLink(license)} license.
+${renderLicenseBadge(license)}
+`;
   }
   return ""
 }
@@ -29,40 +32,36 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
     
-  ## Description
-  ${data.description}
+## Description
+${data.description}
     
-  ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+        
+## Installation
+${data.installation}
     
-    
-  ## Installation
-  ${data.installation}
-    
-  ## Usage
-  ${data.usage}
-    
-  ## License
-  The license used for this project is ${data.license}. 
-  ${renderLicenseBadge(data.license)} 
-  ${renderLicenseLink(data.license)} //find links for license to display badge
+## Usage
+${data.usage}
 
-  ## Contributing
-  ${data.contributing}
+${renderLicenseSection(data.license)}
 
-  ## Tests
-  ${data.tests}
+## Contributing
+${data.contributing}
+
+## Tests
+${data.tests}
     
-  ## Questions
-  Any questions or concerns feel free to reach out.
-  Github: [${data.github}] (https://github.com/${data.github})
-  Email: ${data.email}
-  `;
+## Questions
+Any questions or concerns feel free to reach out.
+Github: [${data.github}] (https://github.com/${data.github})
+Email: ${data.email}
+`;
 
 }
 
