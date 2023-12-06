@@ -1,7 +1,7 @@
-# t ![license](https://img.shields.io/badge/LICENSE-MIT-blue)
+# Professional README Generator ![license](https://img.shields.io/badge/LICENSE-MIT-blue)
     
 ## Description
-t
+Here the user will input a short description of their application.
     
 ## Table of Contents
 - [Installation](#installation)
@@ -12,10 +12,10 @@ t
 - [Questions](#questions)
         
 ## Installation
-t
+Here the user will input the steps to their job.
     
 ## Usage
-u
+Here the user will input the instructions and examples.
 
 ## License
 This project is licensed under the MIT license.
@@ -23,12 +23,12 @@ This project is licensed under the MIT license.
 
 
 ## Contributing
-u
+N/A
 
 ## Tests
-u
+Here the user will provide steps.
     
 ## Questions
 Any questions or concerns feel free to reach out.
-Github: [u] (https://github.com/u)
-Email: u
+Github: [sarmoros] (https://github.com/sarmoros)
+Email: sarahym0703@gmail.com
