@@ -1,7 +1,7 @@
-# u <img alt="MIT" src="https://img.shields.io/badge/MIT-blue" />
+# t ![license](https://img.shields.io/badge/LICENSE-MIT-blue)
     
 ## Description
-u
+t
     
 ## Table of Contents
 - [Installation](#installation)
@@ -12,7 +12,7 @@ u
 - [Questions](#questions)
         
 ## Installation
-u
+t
     
 ## Usage
 u

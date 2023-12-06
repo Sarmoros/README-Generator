@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license !== "None") {
-    return `![${license}](https://img.shields.io/badge/${license}-blue)`;
+    return `![license](https://img.shields.io/badge/LICENSE-${license}-blue)`;
   }
   return ""
 }
@@ -30,8 +30,7 @@ ${renderLicenseLink(license)}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  const licenseBadge = renderLicenseBadge(data.license);
-  return `# ${data.title} ${licenseBadge}
+  return `# ${data.title} ${renderLicenseBadge(data.license)}
     
 ## Description
 ${data.description}
